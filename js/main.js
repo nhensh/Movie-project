@@ -4,6 +4,8 @@ $( document ).ready(function() {
     var $window = $(window)
     var $box = $(".box");
     var $menus = $(".header ul");
+    var $start = $("#start");
+    var $movies = $("#movies");
 
     var currentIndex = 0;
     var lastIndex = -1;
@@ -17,7 +19,7 @@ $( document ).ready(function() {
     $(this).css({
         position: "absolute",
         top: index * 74,
-        color: $box.eq(index).css("background-color")
+        color: "#fff" //$box.eq(index).css("background-color")
     });
     
     setHeader();
@@ -53,7 +55,7 @@ $( document ).ready(function() {
         index = 1;
 
         $.each(colours, function(index) {
-            currentIndex + 1;
+            currentIndex;
             if(currentIndex == index) {
                 $('.header').addClass('colour-'+ (index + 1));
             } else {
