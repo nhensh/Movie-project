@@ -19,6 +19,7 @@ $( document ).ready(function() {
         top: index * 74,
         color: $box.eq(index).css("background-color")
     });
+    
     setHeader();
     });
 
@@ -43,18 +44,33 @@ $( document ).ready(function() {
 
     function setHeader() {
 
-    TweenLite.to($menus, 0.5, {
-        top: -74 * currentIndex - 14
-    });
+        var colours = $(".box");
 
-    if (currentIndex > lastIndex) {
-        //some animation from top to bottom
-        //console.log("otgore nadolu");
-    } else {
-        //some animation from bottom to top 
-        //console.log("otdolu nagore");
+        TweenLite.to($menus, 0.5, {
+            top: -74 * currentIndex - 14
+        });
+
+        index = 1;
+
+        $.each(colours, function(index) {
+            currentIndex + 1;
+            if(currentIndex == index) {
+                $('.header').addClass('colour-'+ (index + 1));
+            } else {
+                $('.header').removeClass('colour-'+ (index + 1));
+            }
+        });
+
+        if (currentIndex > lastIndex) {
+            //some animation from top to bottom
+            //console.log("otgore nadolu");
+        } else {
+            //some animation from bottom to top 
+            //console.log("otdolu nagore");
+        }
+
     }
-    }
+
 
     $window.resize(function() {
     positions.length = 0;

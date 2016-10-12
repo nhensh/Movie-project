@@ -1,8 +1,11 @@
-body, div, p{
-	margin: 0;
-	padding: 0;
-	font-family: Helvetica;
+/* line 1, style.less */
+body,
+div,
+p {
+  margin: 0;
+  padding: 0;
 }
+/* line 6, style.less */
 .header {
   position: fixed;
   z-index: 1000;
@@ -11,7 +14,7 @@ body, div, p{
   background-color: black;
   color: white;
 }
-
+/* line 15, style.less */
 .header p {
   display: inline-block;
   padding-left: 40px;
@@ -19,7 +22,7 @@ body, div, p{
   line-height: 30px;
   padding-top: 30px;
 }
-
+/* line 23, style.less */
 .word {
   position: absolute;
   top: 30px;
@@ -28,47 +31,46 @@ body, div, p{
   height: 30px;
   overflow: hidden;
 }
-
+/* line 32, style.less */
 ul {
   list-style: none;
   position: absolute;
 }
-
+/* line 37, style.less */
 ul li {
   font-size: 24px;
 }
-
+/* line 41, style.less */
 .content .box {
   width: 100%;
-  height: 700px;
+  height: 100vh;
 }
-
-.box1 {
+/* line 63, style.less */
+.colour-1 {
   background-color: #88b6f7;
 }
-
-.box2 {
+/* line 63, style.less */
+.colour-2 {
   background-color: #9a9bff;
 }
-
-.box3 {
+/* line 63, style.less */
+.colour-3 {
   background-color: #bbfb94;
 }
-
-.box4 {
+/* line 63, style.less */
+.colour-4 {
   background-color: #ed74c4;
 }
-
-.box5 {
+/* line 63, style.less */
+.colour-5 {
   background-color: #eb984e;
 }
-
-.box6 {
+/* line 63, style.less */
+.colour-6 {
   background-color: #a9eaf1;
 }
-
-
 /* Center the contents of the bubble chart */
+/* line 71, style.less */
 .bubble-chart-container {
   flex: 1;
   position: relative;
@@ -76,8 +78,11 @@ ul li {
   user-select: none;
   justify-content: center;
 }
-
-/* Center text in the circle, and hide any overflow */
+/* line 78, style.less */
+.bubble-chart-container .bubble-chart-text {
+  /* Center text in the circle, and hide any overflow */
+}
+/* line 80, style.less */
 .bubble-chart-container .bubble-chart-text .bubble-label {
   text-align: center;
   overflow: hidden;
@@ -87,24 +92,25 @@ ul li {
   justify-content: space-around;
   border-radius: 50%;
   will-change: left, top, height, width;
+  /* Show the overflow when hovering over a label */
+  /* Optional, but recommended - reduce the size of text on medium bubbles */
+  /* Optional, but recommended - hide the text on small bubbles */
 }
-
-/* Show the overflow when hovering over a label */
+/* line 90, style.less */
 .bubble-chart-container .bubble-chart-text .bubble-label:hover {
   overflow: visible;
   font-weight: bold;
 }
-
-/* Optional, but recommended - reduce the size of text on medium bubbles */
+/* line 95, style.less */
 .bubble-chart-container .bubble-chart-text .bubble-label.medium {
   font-size: 0.8em;
 }
-
-/* Optional, but recommended - hide the text on small bubbles */
+/* line 99, style.less */
 .bubble-chart-container .bubble-chart-text .bubble-label.small {
   font-size: 0;
+  /* Make sure to unhide the text when hovering */
 }
-/* Make sure to unhide the text when hovering */
+/* line 102, style.less */
 .bubble-chart-container .bubble-chart-text .bubble-label.small:hover {
   font-size: 0.8em;
 }
